@@ -8,18 +8,24 @@ FastQR遵循了Build设计模式，提供了灵活的接口build出二维码生�
 1. Build 二维码模 QrCode 模型
 ```
 QRCode.Builder builder = new QRCode.Builder(MainActivity.this)
-        // 二维码内容
-        .content("hello world")
-        // 二维码前景色
-        .oneColor(Color.BLACK)
-        // 二维码背景色
-        .zeroColor(Color.WHITE)
-        // 二维码边距
-        .margin(1)
-        // 通过bitmap 来设置二维码前景色
-        .colorBitmap(myAdapter.getCurrentColor())
-        // 二维码容错级别
-        .errorCorrection(ErrorCorrection.H);
+                // 二维码内容
+                .content("hello world")
+                // 二维码前景色
+                .oneColor(Color.BLACK)
+                // 二维码背景色
+                .zeroColor(Color.WHITE)
+                // 二维码边距
+                .margin(1)
+                // 通过bitmap 来设置二维码前景色
+                .colorBitmap(myAdapter.getCurrentColor())
+                // 圆角
+                .corner(14)
+                // 中间logo
+                .logo(R.mipmap.logo)
+                // 边框
+                .border(R.mipmap.border2)
+                // 二维码容错级别
+                .errorCorrection(ErrorCorrection.H);
 ```       
 
 2. 生成二维码
@@ -30,8 +36,7 @@ ivQr.setImageBitmap(bitmap);
 ```
 
 # 显示效果
-<iframe height=498 width=510 src="https://github.com/yxdroid/FastQR/blob/master/device-2017-08-21-104647.mp4">
-
+![](https://github.com/yxdroid/FastQR/blob/master/f35c4ca5-1beb-4297-bb62-9c1a1a1f12b2.gif)
 # 二维码扫描
 
 定义QRScanView作为扫描试图
