@@ -6,7 +6,7 @@ FastQR遵循了Build设计模式，提供了灵活的接口build出二维码生�
 # 使用方式
 
 1. Build 二维码模 QrCode 模型
-
+```
 QRCode.Builder builder = new QRCode.Builder(MainActivity.this)
         // 二维码内容
         .content("hello world")
@@ -20,20 +20,23 @@ QRCode.Builder builder = new QRCode.Builder(MainActivity.this)
         .colorBitmap(myAdapter.getCurrentColor())
         // 二维码容错级别
         .errorCorrection(ErrorCorrection.H);
+```       
 
 2. 生成二维码
 
+```
 Bitmap bitmap = FastQRCodeGenerator.genQrCodeBitmap(builder.build());
-ivQr.setImageBitmap(bitmap);        
+ivQr.setImageBitmap(bitmap);  
+```
 
 # 显示效果
-
-![](https://github.com/yxdroid/FastQR/blob/master/device-2017-08-21-104647.mp4)
+<iframe height=498 width=510 src="https://github.com/yxdroid/FastQR/blob/master/device-2017-08-21-104647.mp4">
 
 # 二维码扫描
 
 定义QRScanView作为扫描试图
 
+```
 public class QrScanActivity extends BaseQRScanActivity implements OnQRScanListener {
 
     private QRScanView qrScanView;
@@ -80,3 +83,4 @@ public class QrScanActivity extends BaseQRScanActivity implements OnQRScanListen
         Toast.makeText(this, "相机打开异常", Toast.LENGTH_SHORT).show();
     }
 }
+```
