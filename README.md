@@ -30,8 +30,7 @@ ivQr.setImageBitmap(bitmap);
 ```
 
 # 显示效果
-<iframe height=498 width=510 src="https://github.com/yxdroid/FastQR/blob/master/device-2017-08-21-104647.mp4">
-
+![](https://github.com/yxdroid/FastQR/blob/master/f35c4ca5-1beb-4297-bb62-9c1a1a1f12b2.gif)
 # 二维码扫描
 
 定义QRScanView作为扫描试图
