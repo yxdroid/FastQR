@@ -3,6 +3,9 @@
 
 FastQR遵循了Build设计模式，提供了灵活的接口build出二维码生成模型
 
+# 安装
+下载fastqr_1.0.0.jar（已包含zxing-3.3.0），引入项目
+
 # 使用方式
 
 1. Build 二维码模 QrCode 模型
