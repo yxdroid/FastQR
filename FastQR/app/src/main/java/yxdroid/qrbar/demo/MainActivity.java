@@ -102,6 +102,12 @@ public class MainActivity extends AppCompatActivity {
                 .margin(1)
                 // 通过bitmap 来设置二维码前景色
                 .colorBitmap(myAdapter.getCurrentColor())
+                // 圆角
+                .corner(14)
+                // 中间logo
+                .logo(R.mipmap.logo)
+                // 边框
+                .border(R.mipmap.border2)
                 // 二维码容错级别
                 .errorCorrection(ErrorCorrection.H);
 
